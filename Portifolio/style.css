@@ -48,6 +48,16 @@ header{
     transition-duration: 0.5s;
 }
 
+.nav1 > a.ativo {
+    background-color: #333;
+    color: white;
+}
+
+.nav1 > a.ativo:hover{
+    background-color: #000;
+    cursor: default;
+}
+
 .sec1{
     max-width: 900px;
     display: flex;
