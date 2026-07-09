@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Carlos Lima</title>
+    <link rel="stylesheet" href="style/style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        :root{
+            --cor1: #39C5D7;
+            --cor2: #4D99A3;
+            --cor3: #4B6C70;
+            --cor4: #353C3D;
+            --cor5: #253133;
+            --cor6: #121819;
+            --font1: "Saira", sans-serif;
+            --font2: arial, sans-serif;
+        }
+
+        body{
+            background-color: var(--cor6);
+            font-family: var(--font2);
+        }
+        
+        header{
+            margin-bottom: 30px;
+            padding: 10px;
+            text-align: center;
+            background-image: linear-gradient(to top, var(--cor6), var(--cor5));
+        }
+        header h1{
+            color: white;
+            font-family: var(--font1);
+            font-size: 3em;
+            text-shadow: 2px 2px 3px var(--cor1);
+            padding-bottom: 10px;
+        }
+        header a{
+            text-decoration: none;
+            color: var(--cor3);
+            font-size: 1.2em;
+            font-weight: bold;
+            padding: 5px 20px;
+            border-radius: 10px;
+            transition: all 0.3s;
+        }
+        header a:hover{
+            text-decoration: underline;
+            background-color: var(--cor5);
+            color: var(--cor2);
+            transform: translateY(-2px); 
+        }
+        main{
+            margin: auto;
+        }
+        .section1{
+            display: flex;
+            flex-wrap: wrap; /* Permite que os itens pulem para baixo se faltar espaço */
+            gap: 20px;       /* Cria espaçamento entre o texto e a imagem sem precisar de margins malucas */
+            align-items: center;
+        }
+        .section1 img{
+            max-width: 100%; /* A imagem nunca será maior que o container dela */
+            display: block;
+            width: 400px;   /* Define um tamanho fixo padrão para a foto */
+            height: 400px;  /* Mantém ela quadradinha */
+            object-fit: cover;  /* Garante que o rosto do Carlos não fique esticado dentro do círculo */
+            margin: auto;
+            border-radius: 50%;
+            box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.338);
+        }
+        .section1 h1{
+            font-family: var(--font1);
+            color: #fff;
+            margin-bottom: 10px;
+            font-size: 3em;
+        }
+        .texto{
+            flex: 1;         /* Faz o texto ocupar o espaço disponível */
+            min-width: 250px; /* Se a tela for menor que isso, ele joga a imagem para baixo automaticamente */
+            color: #fff;
+            padding: 40px;
+        }
+        .texto p{
+            text-indent: 30px;
+            line-height: 1.8em;
+            background-color: var(--cor5);
+            padding: 30px;
+            border-radius: 0px 80px;
+            font-size: 1.1em;
+            box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.338);
+
+        }
+        .section2{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            text-align: center;
+            gap: 20px;          /* Cria um espaço de 20px entre um card e outro */
+            margin: 40px auto;  /* Centraliza a seção na tela sem espremer os lados */
+            max-width: 700px;  /* Define um limite máximo de largura para o site não espalhar infinito */
+            padding: 0px 20px;
+        }
+        .card2{
+            flex: 1;            /* Faz todos os cards terem exatamente o mesmo tamanho */
+            min-width: 110px;
+            max-width: 320px;   /* Garante que nenhum card fique gigante em telas grandes */
+            background-color: var(--cor5);
+            padding: 20px;      /* Deixei o preenchimento igual em todos os lados */
+            box-shadow: -10px 0px 10px rgba(0, 0, 0, 0.415);
+            border-radius: 8px;
+        }
+        .card2:hover{
+            background-color: var(--cor4);
+            transform: translateY(-5px);
+            transition-duration: 0.6s;
+            box-shadow: -10px 10px 10px #78ffdd4f;
+        }
+        .card2 img {
+            width: 100%;   /* A imagem vai ocupar exatamente a largura do card, nem mais, nem menos */
+            height: auto;  /* Evita que a imagem fique achatada ou esticada */
+        }
+
+        footer {
+            background-color: var(--cor5);
+            padding: 20px 10px;
+            box-shadow: 0px -3px 4px rgba(0, 0, 0, 0.321);
+            color: #fff;
+
+            /* Ativa o Flexbox para alinhar os 3 blocos principais em linha */
+            display: flex;
+            justify-content: space-between; /* Empurra um pra esquerda, um pro centro e um pra direita */
+            align-items: center;            /* Alinha todos verticalmente no meio */
+            flex-wrap: wrap;                /* Se a tela encolher, eles pulam de linha organizados */
+            gap: 30px;                      /* Espaço de segurança entre os blocos no mobile */
+            max-width: 1200px;              /* Limita a largura para telas muito grandes */
+            margin: 0 auto;                 /* Centraliza o footer na tela */
+        }
+
+        /* Estilo do Bloco Esquerdo */
+        .footer-esquerdo {
+            flex: 1;
+            min-width: 200px;
+            margin-left: 10px;
+        }
+        .footer-esquerdo h3 {
+            font-family: var(--font1);
+            font-size: 1.5em;
+            color: var(--cor1);
+            margin-bottom: 5px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.392);
+        }
+        .footer-esquerdo p {
+            font-size: 0.9em;
+            opacity: 0.8;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.392);
+            
+        }
+
+        /* Estilo do Bloco Central (Links) */
+        .footer-centro {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            flex: 1;
+            min-width: 200px;
+        }
+        .footer-centro a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        .footer-centro a:hover {
+            text-decoration: underline;
+            color: var(--cor1);
+        }
+
+        /* Estilo do Bloco Direito (Botão) */
+        .footer-direito {
+            display: flex;
+            justify-content: flex-end; /* Empurra o botão bem para a direita */
+            flex: 1;
+            min-width: 200px;
+            margin-right: 10px;
+        }
+        .btn-contato {
+            text-decoration: none;
+            color: var(--cor6);
+            background-color: var(--cor1);
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s;
+        }
+        .btn-contato:hover {
+            background-color: var(--cor2);
+            color: #fff;
+            transform: translateY(-2px); /* Efeito sutil de subir ao passar o mouse */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Carlos Lima</h1>
+        <nav>
+            <a href="#">Quem Sou Eu?</a>
+            <a href="#">Galeria</a>
+            <a href="#">Contato</a>
+        </nav>
+    </header>
+    <main>
+        <section class="section1">
+            <div class="texto">
+                <h1>Sobre</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet autem voluptate, tempore sequi pariatur facilis, nam quaerat, aliquid modi magni cupiditate corrupti ex quasi neque vel. Sint facilis magnam deleniti. Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic error magnam animi repellat maxime optio iste nihil temporibus atque, deleniti cumque pariatur eos, sequi ipsum culpa molestias expedita soluta nulla.</p>
+            </div>
+            <img src="image/perfil.png" alt="">
+        </section>
+        <section class="section2">
+            <article class="card2">
+                <h2>Teste 1</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                <img src="image/card2.jpg" alt="">
+            </article>
+            <article class="card2">
+                <h2>Teste 2</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                <img src="image/card2.jpg" alt="">
+            </article>
+            <article class="card2">
+                <h2>Teste 3</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                <img src="image/card2.jpg" alt="">
+            </article>
+        </section>
+    </main>
+    <footer>
+        <!-- Bloco 1: Lado Esquerdo (Título + Frase) -->
+        <div class="footer-esquerdo">
+            <h3>Carlos Lima</h3>
+            <p>Eternizando momentos através das lentes.</p>
+        </div>
+
+        <!-- Bloco 2: Centro (Links de Navegação) -->
+        <div class="footer-centro">
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">Gmail</a>
+        </div>
+
+        <!-- Bloco 3: Lado Direito (Botão de Contato) -->
+        <div class="footer-direito">
+            <a href="#" class="btn-contato">Fale Comigo</a>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PoupaGrana - Controle suas Finanças</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        :root{
+            --cor0: #0FB072;
+            --cor1: #247D5B;
+            --cor2: #244A3B;
+            --cor3: #23332D;
+            --cor4: #2D3331;
+            --cor5: #50755A;
+            --cor6: #558261;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #D4FFE1;
+        }
+
+        .navbar{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+            background-color: var(--cor2);
+            align-items: center;
+        }
+        .logo{
+            font-size: 2em;
+            font-weight: bolder;
+            color: var(--cor0);
+            text-shadow: 2px 2px 10px #50755A;
+        }
+        .menu{
+            transform: translate(-40px);
+            margin-left: 34px;
+        }
+        .menu a{
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 10px;
+        }
+        .menu a:hover{
+            text-decoration: underline;
+            color: antiquewhite;
+        }
+        .btn-download {
+            background-color: #50755A;
+            padding: 3px 7px;
+            border-radius: 7px;
+
+            font-weight: 600;
+            color: white;
+            text-decoration: none;
+            box-shadow: 1px 2px 7px #15161533;
+        }
+
+        .btn-download:hover{
+            text-decoration: underline;
+            transform: translateY(-2px);
+            background-color: #558261;
+        }
+
+        .hero{
+            max-width: 900px;
+            margin: auto;
+        }
+        .hero-texto{
+            color: #51A868;
+            display: flex;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+        .hero-texto h1{
+            width: 100%;
+            margin: 20px auto 10px auto;
+            text-align: center;
+        }
+        .hero-texto p{
+            width: 100%;
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--cor1);
+        }
+
+        .hero1{
+            max-width: 400px;
+            margin: auto;
+        }
+        .btn-principal{
+            background-color: var(--cor5);
+            padding: 13px 15px;
+            border-radius: 7px;
+
+            font-weight: 600;
+            color: white;
+            text-decoration: none;
+            box-shadow: 1px 2px 7px #15161533;
+        }
+        .btn-principal:hover{
+            text-decoration: underline;
+            background-color: var(--cor6);
+
+        }
+
+
+        .hero-placeholder-tela {
+            flex: 1;
+            min-width: 230px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            margin-top: 40px;   
+            margin-bottom: 40px;
+        }
+
+        .box-celular{
+            max-width: 250px; /* Define a largura máxima que o celular pode ter no site */
+            width: 100%;
+            
+        }
+
+        .box-celular img{
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 20px;
+        }
+
+        /* cards */
+        .vantagens{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 40px;
+            border-radius: 30px;
+            flex-wrap: wrap;
+            gap: 40px;
+            background-color: var(--cor3);
+        }
+        .card-vantagem{
+            max-width: 300px;
+            background-color: var(--cor1);
+            padding: 20px 20px 50px;
+            border-radius: 10px;
+            color: white;
+            text-align: center;
+            box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.464);
+        }
+        .card-vantagem h3{
+            font-size: 1.4em;
+            margin-bottom: 30px;
+            text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.466);
+        }
+
+
+        footer{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 20px;
+            gap: 20px;
+
+            align-items: center;
+            background-color: var(--cor4);
+            color: #fff;
+            box-shadow: 0px 8px 16px #00000032;
+        }
+
+        footer h2{
+            font-family: var(--fonte-titulo);
+            font-size: 2.2em;
+            line-height: 1.2em;
+            text-shadow: 1px 2px 5px #000000b5;
+        }
+
+        footer address{
+            font-style: normal;
+            opacity: 0.8;
+            max-width: 230px;
+        }
+
+        footer nav{
+            display: flex;
+            gap: 15px;
+            transform: translate(-33px);
+            margin-left: 40px;
+        }
+        footer a{
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        footer a:hover{
+            text-decoration: underline;
+            transform: translateY(-2px);
+            transition-duration: 0.2s;
+        }
+        footer > p{
+            opacity: 0.8;
+            font-size: 0.8em;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">PoupaGrana</div>
+        <nav class="menu">
+            <a href="#">Benefícios</a>
+            <a href="#">Como Funciona</a>
+        </nav>
+        <a href="#"class="btn-download">Baixar App</a>
+    </header>
+
+    <main>
+        <!-- Bloco Principal (Chamada do Site) -->
+        <section class="hero">
+            <div class="hero-texto">
+                <h1>O aplicativo que faz o seu dinheiro render de verdade.</h1>
+                <div class="hero1">
+                    <p>Monitore seus gastos, crie metas de economia e junte dinheiro sem complicação.</p>
+                    <a href="#" class="btn-principal">Começar Agora</a>
+                </div>
+            </div>
+            <div class="hero-placeholder-tela">
+                <div class="box-celular">
+                    <img src="celular.png" alt="Mockup do App no Celular">
+                </div>
+            </div>
+        </section>
+
+        <!-- Bloco de Vantagens (Cards lado a lado) -->
+        <section class="vantagens">
+            <div class="card-vantagem">
+                <h3>Rendimento Automático</h3>
+                <p>Seu dinheiro rende 100% do CDI só de ficar na conta.</p>
+            </div>
+            <div class="card-vantagem">
+                <h3>Metas Pix</h3>
+                <p>Guarde dinheiro direto ao criar objetivos personalizados.</p>
+            </div>
+            <div class="card-vantagem">
+                <h3>Segurança Total</h3>
+                <p>Seus dados protegidos com criptografia de ponta a ponta.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="">
+        <h2>PoupaGrana</h2>
+        <nav>
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">WhatsApp</a>
+        </nav>
+        <div class="btn-principal">
+            <a href="#">Fale Conosco</a>
+        </div>
+        <p>copyright</p>
+    </footer>
+</body>
+</html>

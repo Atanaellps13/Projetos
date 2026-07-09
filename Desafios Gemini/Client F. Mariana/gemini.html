@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee & Co</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Montserrat:wght@400;600&display=swap');
+
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box; /* Garante que padding não quebre o tamanho das caixas */
+        }
+
+        :root {
+            --marrom-escuro: #4A2E2B;
+            --marrom-medio: #a53f2a;
+            --laranja-rustico: #bf5742;
+            --creme-claro: #F5EBE6;
+            --creme-botao: #f0d0da;
+            --fonte-titulo: 'Cinzel', serif; /* Fonte clássica/elegante para a Mariana */
+            --fonte-texto: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background-color: var(--creme-claro);
+            font-family: var(--fonte-texto);
+            color: var(--marrom-escuro);
+        }
+
+        /* --- HEADER --- */
+        .header1 {
+            width: 100%;
+            background-color: var(--marrom-medio);
+            color: white;
+        }
+        
+        .headerp {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap; /* Ajuda a quebrar linha no celular */
+            gap: 20px;
+        }
+
+        .marca h1 {
+            font-family: var(--fonte-titulo);
+            font-size: 2em;
+            line-height: 1.1em;
+        }
+
+        .headerp p {
+            padding: 15px 25px;
+            background-color: var(--laranja-rustico);
+            border-radius: 40px 0px 40px 0px;
+            text-align: center;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+
+        .btn-contato a {
+            text-decoration: none;
+            background-color: var(--creme-botao);
+            color: black;
+            font-size: 1.1em;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 10px;
+            transition: transform 0.2s;
+            display: inline-block;
+        }
+        .btn-contato a:hover {
+            transform: translateY(-2px);
+        }
+
+        /* --- NAV --- */
+        .nav1 {
+            background-color: var(--marrom-escuro);
+            padding: 12px;
+            text-align: center;
+        }
+        
+        .nav1 a {
+            text-decoration: none;
+            color: white;
+            margin: 0px 15px;
+            font-weight: bold;
+            font-size: 1em;
+        }
+        .nav1 a:hover {
+            text-decoration: underline;
+        }
+
+        /* --- MAIN & CARDAPIO --- */
+        main {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .article1 {
+            background-color: var(--marrom-medio);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+            
+            display: flex;
+            flex-wrap: wrap; /* Mágica do celular: joga as colunas para baixo se faltar espaço */
+            gap: 30px;
+        }
+
+        .article1 h1 {
+            font-family: var(--fonte-titulo);
+            width: 100%; /* Força o título principal a ocupar a linha toda sozinho */
+            font-size: 2.5em;
+            border-bottom: 2px solid var(--laranja-rustico);
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+
+        .coffee, .acm {
+            flex: 1;
+            min-width: 250px; /* Garante tamanho mínimo pro layout não virar uma tripa no mobile */
+        }
+
+        .coffee h2, .acm h2 {
+            font-family: var(--fonte-titulo);
+            margin-bottom: 15px;
+            color: var(--creme-claro);
+        }
+
+        ul {
+            list-style: none; /* Remove aquelas bolinhas padrões do HTML */
+        }
+
+        ul li {
+            padding: 8px 0;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
+            font-size: 1.1em;
+        }
+
+        /* --- DESTAQUE (Bolo de Cenoura) --- */
+        .pmp {
+            margin-top: 40px;
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            border-left: 8px solid var(--laranja-rustico); /* Detalhe visual de destaque */
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.05);
+        }
+
+        .pmp h2 {
+            font-family: var(--fonte-titulo);
+            margin-bottom: 15px;
+            color: var(--marrom-escuro);
+        }
+
+        .pmp ul li {
+            color: #555;
+            border-bottom: 1px solid #eee;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: var(--marrom-escuro);
+            color: white;
+            padding: 40px 20px;
+            margin-top: 60px;
+            
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        footer h2 {
+            font-family: var(--fonte-titulo);
+            font-size: 1.8em;
+        }
+
+        footer address {
+            font-style: normal;
+            opacity: 0.8;
+            max-width: 250px;
+        }
+
+        footer nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        footer nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        footer nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header class="header1">
+        <div class="headerp">
+            <div class="marca">
+                <h1>Coffee<br>& Co</h1>
+            </div>
+            <p>Horário de serviço:<br>Das 06:00hrs às 18:00hrs</p>
+            <div class="btn-contato">
+                <a href="#">Contato</a>
+            </div>
+        </div>
+    </header>
+    
+    <nav class="nav1">
+        <a href="#">Home</a>
+        <a href="#">Menu</a>
+        <a href="#">Cardápio</a>
+    </nav>
+    
+    <main>
+        <article class="article1">
+            <h1>Cardápio</h1>
+            <div class="coffee">
+                <h2>Cafés Especiais</h2>
+                <ul>
+                    <li>Espresso Tradicional - R$ 6,00</li>
+                    <li>Cappuccino Italiano - R$ 9,50</li>
+                    <li>Mocha com Calda Artesanal - R$ 12,00</li>
+                </ul>
+            </div>
+            <div class="acm">
+                <h2>Acompanhamentos</h2>
+                <ul>
+                    <li>Pão de Queijo Mineiro - R$ 5,00</li>
+                    <li>Croissant Folhado - R$ 8,50</li>
+                    <li>Fatia de Bolo Caseiro - R$ 7,00</li>
+                </ul>
+            </div>
+        </article>
+        
+        <article class="pmp">
+            <h2>⭐ Destaque do Mês</h2>
+            <ul>
+                <li><strong>Bolo de Cenoura com Brigadeiro Gourmet</strong> - R$ 12,00</li>
+                <li><em>Uma fatia generosa do nosso bolo fofinho com cobertura vulcão de brigadeiro artesanal.</em></li>
+            </ul>
+        </article>
+    </main>
+    
+    <footer>
+        <h2>Coffee<br>& Co</h2>
+        <address>Endereço: Rua do Grão, 123, Bairro Centro - PR</address>
+        <nav>
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">WhatsApp</a>
+        </nav>
+        <div class="btn-contato">
+            <a href="#">Fale Conosco</a>
+        </div>
+    </footer>
+</body>
+</html>
