@@ -35,6 +35,9 @@ header{
 }
 
 .nav1 > a{
+    display: inline-flex;  /* 💡 Faz o ícone e o texto ficarem na mesma linha */
+    align-items: center;   /* 💡 Centraliza os dois verticalmente na perfeição */
+
     text-decoration: none;
     color: black;
     font-weight: bolder;
@@ -48,14 +51,9 @@ header{
     transition-duration: 0.5s;
 }
 
-.nav1 > a.ativo {
-    background-color: #333;
-    color: white;
-}
-
-.nav1 > a.ativo:hover{
-    background-color: #000;
-    cursor: default;
+.nav1 > a > .material-symbols-outlined {
+    font-size: 19px; 
+    padding-right: 6px;
 }
 
 .sec1{
