@@ -69,7 +69,6 @@ header{
 .div1{
     flex: 1;
     min-width: 280px;
-    margin-top: 40px;
     padding: 20px;
 }
 .div1 h1{
