@@ -35,8 +35,8 @@ header{
 }
 
 .nav1 > a{
-    display: inline-flex;  /* 💡 Faz o ícone e o texto ficarem na mesma linha */
-    align-items: center;   /* 💡 Centraliza os dois verticalmente na perfeição */
+    display: inline-flex;
+    align-items: center;
 
     text-decoration: none;
     color: black;
@@ -87,6 +87,26 @@ header{
     opacity: 90%;
     text-align: justify;
 }
+
+.btn-projetos{
+    margin: 20px 0px 30px 0px;
+}
+
+.btn-projetos > a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: #000;
+    padding: 10px 15px;
+    border-radius: 15px;
+    box-shadow: 2px 1px 4px #00000043;
+
+}
+
+.btn-projetos:hover{
+    transform: translateY(-2px);
+}
+
 .p2{
     display: flex;
     margin-top: 20px;
@@ -108,12 +128,6 @@ header{
     width: 100%;
     max-width: 400px;
     margin-inline: auto;
-
-    /* align-items: center;
-    transform: translateY(20px);
-    margin-left: 100px;
-    margin-top: 60px;
-    min-width: 400px; */
 }
 .img1 > img{
     width: 100%;
