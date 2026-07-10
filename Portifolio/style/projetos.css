@@ -1,0 +1,46 @@
+
+
+.container-projetos{
+    max-width: 900px;
+    display: flex;
+    margin: auto;
+    padding: 20px;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+}
+
+
+.container-projetos > h1{
+    width: 100%;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.card-projeto{
+    max-width: 900px;
+    width: 100%;
+
+    background-image: url(../image/Pagina1.png);
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.card1{
+    width: 100%;
+    display: flex;
+    max-width: 300px;
+    flex-wrap: wrap;
+}
+
+.info-projeto{
+    width: 100%;
+    background-color: blue;
+    padding: 4px 24px 24px;
+}
+
+.info-projeto > h2{
+    padding-top: 20px;
+}
