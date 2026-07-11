@@ -62,6 +62,18 @@ header{
 }
 
 
+.nav1 > a.ativo {
+    background-color: #333;
+    color: white;
+}
+.nav1 > a.ativo:hover {
+    background-color: #000;
+    cursor: default;
+    transition-duration: 0.5s;
+}
+
+
+
 /* Rodapé do meu Portifoio */
 
 .footer1{
