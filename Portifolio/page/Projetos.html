@@ -3,55 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projetos Noel Scott</title>
-    <link rel="shortcut icon" href="../image/favicon.ico" type="image/x-icon">
+    <title>Projetos - Noel Scott</title>
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../style/style.css">
     <link rel="stylesheet" href="../style/projetos.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
     <header>
         <nav class="nav1">
-            <a href="../index.html">
-                <span class="material-symbols-outlined">home</span>Home
-            </a>
-            <a href="#" class="ativo">
-                <span class="material-symbols-outlined">folder</span> Projetos
-            </a>
-            <a href="#">
-                <span class="material-symbols-outlined">mail</span> Contato
-            </a>
+            <a href="../index.html">Home</a>
+            <a href="projetos.html" class="active">Projetos</a>
+            <a href="#">Contato</a>
         </nav>
     </header>
-    <main>
-        <section class="container-projetos">
-            <h1>Meus Projetos</h1>
 
-            <!-- Card do Projeto 1 -->
-            <div class="cards">
-                <div class="card" id="card1">
-                    <div class="info-projeto">
-                        <h2>NStore</h2>
-                        <p>Uma landing page moderna desenvolvida para...</p>
-                        <a href="../index.html" class="btn-ver-projeto">Visualizar Site</a>
+    <main>
+        <section class="projetos-section">
+            <h1 class="titulo-projetos">Projetos</h1>
+            <p class="subtitulo-projetos">Alguns dos meus trabalhos recentes</p>
+
+            <div class="projetos-grid">
+                <!-- Projeto 1 -->
+                <div class="projeto-card">
+                    <div class="projeto-thumb">
+                        <img src="../image/projeto1.png" alt="Landing Page 1">
+                        <div class="projeto-overlay">
+                            <a href="#" class="btn-visualizar">Ver projeto</a>
+                        </div>
+                    </div>
+                    <div class="projeto-info">
+                        <h3>Landing Page - Produto X</h3>
+                        <p class="categoria">HTML / CSS / JavaScript</p>
+                        <p class="descricao">Landing page moderna para lançamento de produto com animações suaves.</p>
                     </div>
                 </div>
-                <div class="card" id="card2">
-                    <div class="info-projeto">
-                        <h2>NStore</h2>
-                        <p>Uma landing page moderna desenvolvida para...</p>
-                        <a href="https://atanaellps13.github.io/Projetos/Desafios%20Gemini/Cliente%20F.%20PoupaGrana/" target="_blank" class="btn-ver-projeto">Visualizar Site</a>
+
+                <!-- Projeto 2 -->
+                <div class="projeto-card">
+                    <div class="projeto-thumb">
+                        <img src="../image/projeto2.png" alt="Landing Page 2">
+                        <div class="projeto-overlay">
+                            <a href="#" class="btn-visualizar">Ver projeto</a>
+                        </div>
+                    </div>
+                    <div class="projeto-info">
+                        <h3>Portfólio Clean</h3>
+                        <p class="categoria">HTML / CSS</p>
+                        <p class="descricao">Portfólio pessoal com design minimalista e foco em tipografia.</p>
                     </div>
                 </div>
-                <div class="card" id="card3">
-                    <div class="info-projeto">
-                        <h2>NStore</h2>
-                        <p>Uma landing page moderna desenvolvida para...</p>
-                        <a href="https://atanaellps13.github.io/Projetos/Desafios%20Gemini/Client%20F.%20Mariana/pratica.html" target="_blank" class="btn-ver-projeto">Visualizar Site</a>
+
+                <!-- Projeto 3 -->
+                <div class="projeto-card">
+                    <div class="projeto-thumb">
+                        <img src="../image/projeto3.png" alt="Landing Page 3">
+                        <div class="projeto-overlay">
+                            <a href="#" class="btn-visualizar">Ver projeto</a>
+                        </div>
+                    </div>
+                    <div class="projeto-info">
+                        <h3>E-commerce Minimalista</h3>
+                        <p class="categoria">HTML / CSS / JS</p>
+                        <p class="descricao">Layout de loja virtual com design limpo e foco na experiência do usuário.</p>
                     </div>
                 </div>
             </div>
-
         </section>
     </main>
     <footer class="footer1">
